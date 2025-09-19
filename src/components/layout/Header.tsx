@@ -57,10 +57,12 @@ export const Header = () => {
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
               Contact
             </Link>
-            <Button size="sm" className="btn-primary">
-              <ShoppingBag className="h-4 w-4 mr-2" />
-              Cart
-            </Button>
+            <Link to="/cart">
+              <Button size="sm" className="btn-primary">
+                <ShoppingBag className="h-4 w-4 mr-2" />
+                Cart
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -113,10 +115,12 @@ export const Header = () => {
               >
                 Contact
               </Link>
-              <Button className="btn-primary justify-start mt-4" onClick={() => setIsMenuOpen(false)}>
-                <ShoppingBag className="h-4 w-4 mr-2" />
-                Cart
-              </Button>
+              <Link to="/cart">
+                <Button className="btn-primary justify-start mt-4" onClick={() => setIsMenuOpen(false)}>
+                  <ShoppingBag className="h-4 w-4 mr-2" />
+                  Cart
+                </Button>
+              </Link>
             </nav>
           </div>
         )}

@@ -96,7 +96,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
               className="opacity-0 group-hover:opacity-100 transition-opacity"
               onClick={(e) => {
                 e.preventDefault();
-                // Add to cart logic would go here
+                window.location.href = '/cart';
               }}
             >
               <ShoppingBag className="h-4 w-4" />

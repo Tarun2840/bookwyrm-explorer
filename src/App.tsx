@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Categories from "./pages/Categories";
 import ProductGrid from "./pages/ProductGrid";
 import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="categories" element={<Categories />} />
             <Route path="categories/:categorySlug/products" element={<ProductGrid />} />
             <Route path="products/:productId" element={<ProductDetail />} />
+            <Route path="cart" element={<Cart />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

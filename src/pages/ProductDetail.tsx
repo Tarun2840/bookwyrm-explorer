@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Star, ShoppingBag, Share2, Heart, Package, Calendar, User, BookOpen } from 'lucide-react';
 import { api } from '@/lib/api';
 import { Button } from '@/components/ui/button';
@@ -10,6 +10,7 @@ import { LoadingSkeleton } from '@/components/ui/loading-skeleton';
 
 export const ProductDetail = () => {
   const { productId } = useParams<{ productId: string }>();
+  const navigate = useNavigate();
 
   const { data: productData, isLoading, error } = useQuery({
     queryKey: ['product', productId],
@@ -152,6 +153,7 @@ export const ProductDetail = () => {
               size="lg" 
               className="btn-primary flex-1"
               disabled={!product.availability}
+              onClick={() => navigate('/cart')}
             >
               <ShoppingBag className="mr-2 h-5 w-5" />
               Add to Cart
